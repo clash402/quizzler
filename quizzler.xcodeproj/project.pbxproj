@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		1C06B88F2634C76600584B7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C06B88E2634C76600584B7A /* AppDelegate.swift */; };
 		1C06B8912634C76600584B7A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C06B8902634C76600584B7A /* SceneDelegate.swift */; };
-		1C06B8932634C76600584B7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C06B8922634C76600584B7A /* ViewController.swift */; };
+		1C06B8932634C76600584B7A /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C06B8922634C76600584B7A /* MainVC.swift */; };
 		1C06B8962634C76600584B7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C06B8942634C76600584B7A /* Main.storyboard */; };
 		1C06B8982634C76D00584B7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C06B8972634C76D00584B7A /* Assets.xcassets */; };
 		1C06B89B2634C76D00584B7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C06B8992634C76D00584B7A /* LaunchScreen.storyboard */; };
+		1C06B8A62635BADE00584B7A /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C06B8A52635BADD00584B7A /* Question.swift */; };
+		1C06B8B12635E80000584B7A /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C06B8B02635E80000584B7A /* Quiz.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1C06B88B2634C76600584B7A /* quizzler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quizzler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C06B88E2634C76600584B7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C06B8902634C76600584B7A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1C06B8922634C76600584B7A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1C06B8922634C76600584B7A /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		1C06B8952634C76600584B7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1C06B8972634C76D00584B7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C06B89A2634C76D00584B7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C06B89C2634C76D00584B7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C06B8A52635BADD00584B7A /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		1C06B8B02635E80000584B7A /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,49 @@
 		1C06B88D2634C76600584B7A /* quizzler */ = {
 			isa = PBXGroup;
 			children = (
-				1C06B88E2634C76600584B7A /* AppDelegate.swift */,
-				1C06B8902634C76600584B7A /* SceneDelegate.swift */,
-				1C06B8922634C76600584B7A /* ViewController.swift */,
-				1C06B8942634C76600584B7A /* Main.storyboard */,
+				1C06B8A92635E79C00584B7A /* Models */,
+				1C06B8A82635E78C00584B7A /* Views */,
+				1C06B8AB2635E7A600584B7A /* Controllers */,
+				1C06B8AE2635E7BD00584B7A /* Other */,
 				1C06B8972634C76D00584B7A /* Assets.xcassets */,
-				1C06B8992634C76D00584B7A /* LaunchScreen.storyboard */,
 				1C06B89C2634C76D00584B7A /* Info.plist */,
 			);
 			path = quizzler;
+			sourceTree = "<group>";
+		};
+		1C06B8A82635E78C00584B7A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1C06B8992634C76D00584B7A /* LaunchScreen.storyboard */,
+				1C06B8942634C76600584B7A /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1C06B8A92635E79C00584B7A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1C06B8A52635BADD00584B7A /* Question.swift */,
+				1C06B8B02635E80000584B7A /* Quiz.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1C06B8AB2635E7A600584B7A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1C06B8922634C76600584B7A /* MainVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1C06B8AE2635E7BD00584B7A /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				1C06B88E2634C76600584B7A /* AppDelegate.swift */,
+				1C06B8902634C76600584B7A /* SceneDelegate.swift */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +175,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C06B8932634C76600584B7A /* ViewController.swift in Sources */,
+				1C06B8932634C76600584B7A /* MainVC.swift in Sources */,
+				1C06B8B12635E80000584B7A /* Quiz.swift in Sources */,
+				1C06B8A62635BADE00584B7A /* Question.swift in Sources */,
 				1C06B88F2634C76600584B7A /* AppDelegate.swift in Sources */,
 				1C06B8912634C76600584B7A /* SceneDelegate.swift in Sources */,
 			);
@@ -289,6 +329,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9YBQ5S77GM;
 				INFOPLIST_FILE = quizzler/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,6 +349,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9YBQ5S77GM;
 				INFOPLIST_FILE = quizzler/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
